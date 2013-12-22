@@ -16,7 +16,15 @@ var socket = io.connect(HOST, {
   'max reconnection attempts': 1000
 });
 
-console.log('Connected to %s', HOST);
+socket.on('connect', function () {
+  console.log('connected to %s', HOST);
+});
+socket.on('disconnect', function () {
+  console.log('disconnected');
+});
+socket.on('reconnecting', function (delay, attempts) {
+  console.log('Attempt %d to reconnect', attempts);
+});
 
 // cgminer client
 var client = new CGMinerClient();
