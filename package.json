@@ -6,7 +6,7 @@
   "dependencies": {
     "cgminer": "0.1.x",
     "coffee-script": "*",
-    "socket.io": "*"
+    "socket.io-client": "*"
   },
   "devDependencies": {
   },
