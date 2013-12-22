@@ -9,7 +9,12 @@ var HOST = 'http://10.0.0.4:8080';
 var NAME = 'miner1';
 
 // connection to remote host
-var socket = io.connect(HOST);
+var socket = io.connect(HOST, {
+  // Increase delay and reconnect attempts
+  // We want to keep trying to reconnect for as long as is reasonable
+  'reconnection delay': 1000,
+  'max reconnection attempts': 1000
+});
 
 console.log('Connected to %s', HOST);
 
