@@ -15,7 +15,7 @@ var client = new CGMinerClient();
 var sendSummary = function () {
   client.summary().then(function(data) {
     if (data && data.SUMMARY && data.SUMMARY.length) {
-      socket.broadcast.emit('miner:summary', {id: NAME, summary: data.SUMMARY[0]});
+      socket.emit('miner:summary', {id: NAME, summary: data.SUMMARY[0]});
     } else {
       console.log('error with summary data');
     }
