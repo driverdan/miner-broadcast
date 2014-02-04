@@ -5,8 +5,8 @@ var CGMinerClient = require('cgminer');
 var io = require('socket.io-client');
 
 // host path
-var HOST = 'http://10.0.0.4:8080';
-var NAME = 'miner1';
+var HOST = process.env.HOST || 'http://gulf.driverdan.com:3000';
+var NAME = process.env.NAME || 'miner';
 
 // cgminer client
 var client = new CGMinerClient();
@@ -28,7 +28,7 @@ var sendSummary = function () {
 var socket = io.connect(HOST, {
   // Increase delay and reconnect attempts
   // We want to keep trying to reconnect for as long as is reasonable
-  'reconnection delay': 1000,
+  'reconnection delay': 500,
   'max reconnection attempts': 1000
 });
 
