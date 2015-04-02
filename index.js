@@ -1,3 +1,9 @@
+/**
+ * miner-broadcast
+ *
+ * See README.md for details
+ */
+
 // Coffeescript required for cgminer lib
 require('coffee-script');
 
@@ -5,8 +11,8 @@ var CGMinerClient = require('cgminer');
 var io = require('socket.io-client');
 
 // host path
-var HOST = process.env.HOST || 'http://gulf.driverdan.com:3000';
-var NAME = process.env.NAME || 'miner';
+var HOST = process.env.MINER_HOST || 'http://localhost:3000';
+var NAME = process.env.MINER_NAME || 'miner';
 
 // cgminer client
 var client = new CGMinerClient();
