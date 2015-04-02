@@ -1,14 +1,24 @@
 {
-  "name": "cgminer-broadcast",
-  "version": "0.0.0",
-  "description": "",
-  "author": "",
+  "name": "miner-broadcast",
+  "version": "0.1.0",
+  "description": "Broadcast cgminer/sgminer stats to miner-stat-server using socket.io",
+  "author": {
+    "name": "Dan DeFelippi",
+    "url": "http://driverdan.com"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://creativecommons.org/licenses/MIT/"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/driverdan/miner-broadcast.git"
+  },
+  "bugs": "http://github.com/driverdan/miner-broadcast/issues",
   "dependencies": {
     "cgminer": "0.1.x",
     "coffee-script": "*",
     "socket.io-client": "0.9.x"
-  },
-  "devDependencies": {
   },
   "engines": {
     "node": ">=0.8.0"
